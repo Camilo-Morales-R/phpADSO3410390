@@ -3,48 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciclos en PHP</title>
+    <title>Ciclos PHP</title>
 </head>
 <body>
-    <?php 
-    $limite = 51;
-    for ($i = 0; $i < $limite; $i++) { 
-        # Impresion de los numeros del 0 al 50
-        echo "Numero: $i<br>";
+    <?php
+    $limite = 50;
+    for ($i=0; $i < $limite; $i++) { 
+        # Impresion de los números del 0 a 50
+        echo "Número: $i<br>";
     }
 
+    // Ciclo while
     $limite = rand(50, 100);
     $inicio = 1;
-    # Impresion de numeros del 1 al limite aleatorio (Entre 50 al 100)
+    echo "<hr>";
+    # Impresion de numeros del 1 al limite aleatorio (50 y 100)
     while ($inicio <= $limite) {
-        echo "[WHILE] Numero: " . $inicio . "<br>";
+        echo "[WHILE] Número: ".$inicio."<br>";
         $inicio++;
     }
 
-    # Do while
+    // DO WHILE
     $dia = date("d");
-    $inicio = rand(10, 20);
-    # Mostrar los numeros de un numero random (Entre 10 y 20) a la fecha actual
+    $inicio = rand(10,20);
+    # Mostrar los numeros de un número random (10 y 20) a la fecha actual
     do {
-        echo "[DO...WHILE] Numero $inicio<br>";
+        echo "[DO...WHILE] Número $inicio";
         $inicio++;
     } while ($inicio <= $dia);
 
-    # Mostrar la tabla de multiplicar del 2
-    $numero = 2; 
-    $multiplicacion = 1;  
-
-    while ($multiplicacion <= 10) {
-        echo "$numero x $multiplicacion = " . ($numero * $multiplicacion) . "<br>";
-        $multiplicacion++; 
+    # MOSTRAR LA TABLAS DE MULTIPLICAR
+    # Utilizar FOR, WHILE y DO...WHILE
+    $numero = 2;
+    echo "<hr>";
+    for ($i = 1; $i <= 10; $i++) {
+    echo "[FOR]$numero x $i = " . ($numero * $i) . "<br>";
     }
 
+    // WHILE
+    $numero = 2;
+    $tabla = 2;
+    echo "<hr>";
+    while ($numero <= 10){
+    echo "[WHILE] $numero x $tabla =" .($numero * $tabla)."<br>";
+    $numero++;
+    } 
+
+    $numero = 2;
+    $tabla = 2;
+    echo "<hr>";
     do {
-        $numero2 = 2; 
-    $multiplicacion2 = 1;  
-    } while ($multiplicacion2 <= 10);
-     echo "$numero2 x $multiplicacion2 = " . ($numero2 * $multiplicacion2) . "<br>";
-        $multiplicacion2++; 
+    echo "[DO.....WHILE] $numero x $tabla =" .($numero * $tabla)."<br>";
+    $numero++;
+    } while ($numero <= 10);
+
     ?>
 </body>
 </html>
